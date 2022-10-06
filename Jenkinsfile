@@ -13,8 +13,8 @@ node {
     stage('Deliver') {
         docker.image('cdrx/pyinstaller-linux:python2').inside{
             sh 'pyinstaller --onefile sources/add2vals.py'
-            archiveArtifacts 'dist/add2vals'
-            sleep(60)
         }
+        archiveArtifacts 'dist/add2vals'
+            sleep(60)
     }   
 }
