@@ -17,6 +17,6 @@ node {
         checkout scm
         sh 'docker run --rm -v \$(pwd)/sources:/src cdrx/pyinstaller-linux:python2 "pyinstaller -F add2vals.py"'
         archiveArtifacts 'sources/dist/add2vals'
-        sleep time: 10, unit: 'SECONDS'
+        sleep time: 60, unit: 'SECONDS'
     } 
 }
